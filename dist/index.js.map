@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/index.js"],"names":["Upload","Dragger"],"mappings":";;;;;;;;;;;;;AAAA;;AACA;;;;;;AAIAA,gBAAOC,OAAP,GAAiBA,gBAAjB;eACeD,e","sourcesContent":["import Upload from './Upload';\nimport Dragger from './Dragger';\n\nexport { DraggerProps } from './Dragger';\n\nUpload.Dragger = Dragger;\nexport default Upload;\n"],"file":"index.js"}
