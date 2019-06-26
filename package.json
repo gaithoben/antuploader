@@ -1,0 +1,114 @@
+{
+  "name": "antuploader",
+  "version": "0.0.0-development",
+  "description": "A component for uploading files",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "commit": "git-cz",
+    "test": "mocha src/index.test.js -w --require babel-core/register",
+    "test:single": "mocha src/index.test.js --require babel-core/register",
+    "prebuild": "rimraf dist",
+    "build": "npm-run-all --parallel build:*",
+    "build:main": "babel  --source-maps --copy-files --out-dir dist --ignore *.test.js src",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gaithoben/antuploader.git"
+  },
+  "keywords": [
+    "cloudhub"
+  ],
+  "author": "Bernard Gaitho <gaithoben@gmail.com> (http://github.com/gaithoben)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gaithoben/antuploader/issues"
+  },
+  "homepage": "https://github.com/gaithoben/antuploader#readme",
+  "dependencies": {
+    "@devexpress/dx-react-core": "1.11.0",
+    "@devexpress/dx-react-grid": "1.11.0",
+    "@devexpress/dx-react-grid-material-ui": "1.11.0",
+    "antd": "3.19.1",
+    "awesome-phonenumber": "2.10.0",
+    "hex-to-rgba": "2.0.0",
+    "react-intl-tel-input": "7.0.1",
+    "react-quill": "^1.2.3",
+    "react-select": "3.0.4",
+    "reqwest": "2.0.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.2.0",
+    "@babel/core": "7.2.0",
+    "@babel/node": "7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-json-strings": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "@babel/plugin-transform-object-assign": "7.2.0",
+    "@babel/plugin-transform-runtime": "7.2.0",
+    "@babel/preset-env": "7.2.0",
+    "@babel/preset-flow": "7.0.0",
+    "@babel/preset-react": "7.0.0",
+    "@babel/register": "7.0.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "10.0.1",
+    "chai": "4.1.2",
+    "css-loader": "0.28.8",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-plugin-import": "2.17.3",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-react": "7.13.0",
+    "ghooks": "2.0.2",
+    "json-loader": "0.5.7",
+    "lodash": "4.17.10",
+    "mocha": "4.0.1",
+    "node-sass": "4.7.2",
+    "npm-run-all": "4.1.2",
+    "raw-loader": "0.5.1",
+    "react-load-script": "0.0.6",
+    "regenerator-runtime": "0.11.1",
+    "rimraf": "2.6.2",
+    "sass-loader": "6.0.6",
+    "semantic-release": "^15.9.14",
+    "style-loader": "0.19.1",
+    "uglifyjs-webpack-plugin": "1.1.6",
+    "webpack": "4.29.6"
+  },
+  "peerDependencies": {
+    "@material-ui/core": "^4.0.1",
+    "@material-ui/icons": "^4.0.1",
+    "axios": "^0.17.1",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "lodash": "4.17.10"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "modules": "commonjs"
+        }
+      ],
+      "@babel/preset-react",
+      "@babel/flow"
+    ],
+    "plugins": [
+      "@babel/plugin-syntax-dynamic-import",
+      "@babel/plugin-syntax-import-meta",
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-proposal-json-strings"
+    ]
+  }
+}
